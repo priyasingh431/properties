@@ -23,6 +23,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:8081/eureka    
       
-    
-
 msg: prodrate conversion production- Hello world    
