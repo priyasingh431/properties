@@ -24,3 +24,5 @@ eureka:
       defaultZone: http://localhost:8081/eureka    
       
 msg: prodrate conversion production- Hello world    
+
+rate.converstion.service.uri: https://api.exchangeratesapi.io/latest    
