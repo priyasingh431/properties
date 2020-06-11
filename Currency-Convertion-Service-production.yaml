@@ -12,6 +12,8 @@ spring:
     password: ibmcurrency
  jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    show-sql=true
+    hibernate.ddl-auto=update
  h2:
     console:
       enabled: true    
