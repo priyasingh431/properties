@@ -6,29 +6,31 @@ spring:
     name: API-Gateway
  cloud:
     gateway:
+      
       routes:
       - id: currencyconvertionservice
         uri: lb://Currency-Convertion-Service
         predicates:
-        - Path=/currencyconverter/**   
+        - Path=/currencyconversion/**   
       - id: currencyrateconvertionservice
         uri: lb://Currency-Rate-Convertion-Service
         predicates:
         - Path=/convertrate/**   
+        
  rabbitmq:
     host: 192.168.99.100
     port: 5672
     username: guest
     password: guest
-    
+
+   
 eureka:
   instance:
-    preferIpAddress: true
     instance-id: ${spring.application.name}:${random.int}
     lease-expiration-duration-in-seconds: 2
     lease-renewal-interval-in-seconds: 1
   client:
     service-url:
-      defaultZone: http://localhost:8081/eureka
+      defaultZone: http://localhost:9091/eureka
       
-msg: Product service - Hello world       
+msg: API gateway message      
