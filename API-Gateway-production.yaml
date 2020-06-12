@@ -6,7 +6,6 @@ spring:
     name: API-Gateway
  cloud:
     gateway:
-      
       routes:
       - id: currencyconvertionservice
         uri: lb://Currency-Convertion-Service
@@ -31,6 +30,6 @@ eureka:
     lease-renewal-interval-in-seconds: 1
   client:
     service-url:
-      defaultZone: http://192.168.99.100:9091
+      defaultZone: http://192.168.99.100:9091/eureka    
       
 msg: API gateway message      
