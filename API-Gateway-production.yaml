@@ -25,12 +25,11 @@ spring:
    
 eureka:
   instance:
-    preferIpAddress: true
     instance-id: ${spring.application.name}:${random.int}
     lease-expiration-duration-in-seconds: 2
     lease-renewal-interval-in-seconds: 1
   client:
     service-url:
-      defaultZone: http://192.168.99.100:9091/eureka    
+      defaultZone: http://192.168.99.100:9091/eureka
       
 msg: API gateway message      
